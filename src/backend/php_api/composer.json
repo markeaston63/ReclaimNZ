@@ -1,0 +1,17 @@
+{
+    "name": "reclaimnz/php_api",
+    "autoload": {
+        "psr-4": {
+            "Reclaimnz\\PhpApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Easton",
+            "email": "mark@reclaimnz.kiwi"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

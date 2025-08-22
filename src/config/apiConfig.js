@@ -1,0 +1,1 @@
+export const API_HOST = 'https://reclaimnz.kiwi'; // Change this if your API host changes
