@@ -23,9 +23,9 @@ const PressPage = () => {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Reclaim New Zealand, a pro–one-law-for-all movement, has successfully completed two major promotions for its upcoming Do Nothing Day/s nationwide protest.
-            </p>
+                         <p className="text-gray-700 leading-relaxed mb-4">
+               Reclaim New Zealand, a pro–one-law-for-all movement, has successfully completed two major promotions for its upcoming <strong>Do Nothing Days</strong> nationwide protest.
+             </p>
 
             <p className="text-gray-700 leading-relaxed mb-4">
               The first promotion appeared in the Whangarei LetterBox monthly newsletter, reaching approximately 12,500 households across the region.
