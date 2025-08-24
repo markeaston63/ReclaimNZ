@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout'; 
+import ProtectedRoute from './components/ProtectedRoute';
 
 import HomePage from './pages/HomePage'; 
 import DisclaimerPage from './pages/DisclaimerPage'; 
@@ -12,7 +13,8 @@ import DonatePage from './pages/DonatePage';
 import BlogPage from './pages/BlogPage'; 
 import LinksPage from './pages/LinksPage'; 
 import QAPage from './pages/QAPage'; 
-import PressPage from './pages/PressPage'; 
+import PressPage from './pages/PressPage';
+import AdminPage from './pages/AdminPage'; 
 
 const App = () => {
   return (
@@ -26,6 +28,11 @@ const App = () => {
         <Route path="links" element={<LinksPage />} />
         <Route path="qa" element={<QAPage />} />
         <Route path="press" element={<PressPage />} />
+        <Route path="admin" element={
+          <ProtectedRoute>
+            <AdminPage />
+          </ProtectedRoute>
+        } />
         <Route path="join" element={<JoinPage />} />
         <Route path="donate" element={<DonatePage />} />        
         <Route path="contact" element={<ContactPage />} />

@@ -33,6 +33,8 @@ const Header = () => {
         { name: 'Join', path: '/join' },
         { name: 'Donate', path: '/donate' },
         { name: 'Contact Us', path: '/contact' },
+        // Admin menu item - only show when logged in
+        ...(isLoggedIn ? [{ name: 'Admin', path: '/admin' }] : []),
     ];
 
     const isActive = (item) => {
