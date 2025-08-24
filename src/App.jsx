@@ -12,6 +12,7 @@ import DonatePage from './pages/DonatePage';
 import BlogPage from './pages/BlogPage'; 
 import LinksPage from './pages/LinksPage'; 
 import QAPage from './pages/QAPage'; 
+import PressPage from './pages/PressPage'; 
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
         <Route path="solution" element={<SolutionPage />} />
         <Route path="blog" element={<BlogPage />} />
         <Route path="links" element={<LinksPage />} />
-        <Route path="qa" element={<QAPage />} />        
+        <Route path="qa" element={<QAPage />} />
+        <Route path="press" element={<PressPage />} />
         <Route path="join" element={<JoinPage />} />
         <Route path="donate" element={<DonatePage />} />        
         <Route path="contact" element={<ContactPage />} />

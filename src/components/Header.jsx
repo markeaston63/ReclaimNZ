@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import fernImage from '../assets/fern.png';
 import { API_HOST } from '../config/apiConfig';
 import Login from './Login';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [openSubMenu, setOpenSubMenu] = useState(null);
-    const [imageError, setImageError] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const location = useLocation();
 
@@ -29,6 +27,7 @@ const Header = () => {
                 { name: 'Blog', path: '/blog' },
                 { name: 'Q&A', path: '/qa' },
                 { name: 'Links', path: '/links' },
+                { name: 'Press', path: '/press' },
             ],
         },
         { name: 'Join', path: '/join' },
@@ -96,18 +95,9 @@ const Header = () => {
         <header className="bg-gradient-to-r from-gray-100 to-gray-300 text-black py-6 shadow-xl">
             <div className="container mx-auto flex flex-wrap justify-between items-center px-4">
                 <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
-                    {!imageError ? (
-                        <img
-                            src={fernImage}
-                            alt="Reclaim NZ Fern Logo"
-                            className="h-20 w-auto rounded-lg shadow-sm"
-                            onError={() => setImageError(true)}
-                        />
-                    ) : (
-                        <div className="h-20 w-20 bg-gray-300 flex items-center justify-center rounded-lg text-gray-600 text-xs">
-                            Image Load Error
-                        </div>
-                    )}
+                    <div className="h-20 w-20 bg-gray-300 rounded-full flex items-center justify-center shadow-lg border-4 border-gray-500">
+                        <span className="text-5xl font-serif font-bold text-black">R</span>
+                    </div>
                     <div className="flex flex-col items-start">
                         <span className="text-3xl font-bold leading-none text-black whitespace-nowrap">Reclaim NZ</span>
                         <span className="text-2xl font-medium leading-none text-black whitespace-nowrap">Enough is Enough!</span>
